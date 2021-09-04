@@ -8,6 +8,7 @@ import { Button, Container, Row, Col, Input, Label } from "reactstrap";
 import "./Home.css";
 import { instanceOf } from "prop-types";
 import { withCookies, Cookies } from "react-cookie";
+import { v4 as uuidv4 } from "uuid";
 
 class Home extends Component {
   static propTypes = {
@@ -27,7 +28,14 @@ class Home extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleMoviesList = this.handleMoviesList.bind(this);
+    this.handleCookie = this.handleCookie.bind(this);
   }
+
+  handleCookie = () => {
+    const { cookies } = this.props;
+    cookies.set("user", uuidv4(), { path: "/" }); // setting the cookie
+    this.setState({ user: cookies.get("user") });
+  };
 
   handleKeyDown(e) {
     if (e.key === "Enter") {
@@ -94,15 +102,21 @@ class Home extends Component {
   }
 
   componentDidMount() {
+    // userID
+    console.log(this.state.user);
+
+    // set a cookie if for a new user
+    if (this.state.user === "") {
+      this.handleCookie();
+    }
+
+    // userID after handle
+    console.log(this.state.user);
+
     if (this.props.match.params.id !== undefined) {
       const mySearch = this.props.match.params.id;
       this.setState({ searchValue: mySearch });
       this.searchMovie(mySearch);
-    }
-
-    // check if the user is running in a private window in browser
-    if (this.state.user === "") {
-      this.setState({ user: "Anonymous" });
     }
   }
 
