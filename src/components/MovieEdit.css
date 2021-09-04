@@ -1,0 +1,100 @@
+.runtime {
+  color: #7a8c99;
+  font-family: Helvetica;
+  font-size: 20px;
+  letter-spacing: 0.22px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.main-title {
+  color: #ffffff;
+  font-family: Helvetica;
+  font-size: 80px;
+  letter-spacing: 0.87px;
+  line-height: 88px;
+  width: 580px;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.title {
+  color: #7a8c99;
+  font-family: Helvetica;
+  font-size: 16px;
+  letter-spacing: 0.17px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.paragraph {
+  color: #ffffff;
+  font-family: Helvetica;
+  font-size: 16px;
+  letter-spacing: 0.17px;
+  line-height: 24px;
+  width: 480px;
+  text-align: left;
+}
+
+.bg {
+  background-size: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px 0 rgba(5, 10, 13, 0.6);
+  width: 480px;
+  height: 640px;
+}
+
+.rectangle-9 {
+  background-color: #ff9f1c;
+  border-radius: 4px 0 0 4px;
+  width: 53px;
+  height: 40px;
+}
+
+.add-to-favourites {
+  color: #7a8c99;
+  font-family: Helvetica;
+  font-size: 16px;
+  letter-spacing: 0.17px;
+  line-height: 19px;
+  text-align: left;
+}
+
+.rectangle-4-6 {
+  background-color: #7a8c99;
+  border-radius: 4px;
+  width: 23px;
+  height: 28px;
+}
+
+.title-r {
+  color: #0a1014;
+  font-family: Helvetica;
+  font-size: 16px;
+  letter-spacing: 0.17px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.rectangle-9-0-8-0-0 {
+  background-color: #0a1014;
+  border: 1px solid #353f4c;
+  border-radius: 4px;
+  box-shadow: 0 4px 30px 0 rgba(5, 10, 13, 0.3);
+  width: 53px;
+  height: 40px;
+}
+
+.title-imdb {
+  color: #ffffff;
+  font-family: Helvetica;
+  font-size: 16px;
+  letter-spacing: 0.17px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.div-footer {
+  height: 200px;
+}

@@ -1,0 +1,66 @@
+.background-black {
+  background-color: #0a1014;
+}
+
+.dont-know-what-to-s {
+  margin-top: 3%;
+  color: #ffffff;
+  font-family: Helvetica;
+  font-size: 24px;
+  letter-spacing: 0.26px;
+  line-height: 29px;
+  text-align: center;
+}
+
+.heres-an-offer-you {
+  color: #7a8c99;
+  font-family: Helvetica;
+  font-size: 16px;
+  letter-spacing: 0.17px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.illustration-empty-state {
+  margin-top: 15%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.whats-in {
+  background-color: #ffffff;
+  width: 73px;
+  height: 13px;
+}
+
+.parent {
+  position: relative;
+}
+.over-img {
+  filter: grayscale(100%);
+  position: absolute;
+  top: 5%;
+  left: 75%;
+}
+
+.rectangle-4 {
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 4px 30px 0 rgba(5, 10, 13, 0.3);
+  width: 180px;
+  height: 240px;
+  margin-top: 10px;
+}
+
+.div-footer-home {
+  height: 400px;
+}
