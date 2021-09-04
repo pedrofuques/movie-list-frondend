@@ -50,7 +50,9 @@ class Home extends Component {
     this.setState({ loading: true });
     this.setState({ error: false });
 
-    fetch(`/movie/search-movie/${mySearch}/${this.state.user}`)
+    fetch(
+      `https://my-movie-list-challenge.herokuapp.com/movie/search-movie/${mySearch}/${this.state.user}`
+    )
       .then((response) => response.json())
       .then((data) => {
         this.setState({ loading: false });

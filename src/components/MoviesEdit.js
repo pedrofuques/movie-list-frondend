@@ -40,14 +40,17 @@ class MoviesEdit extends Component {
       userId: this.state.userId,
     };
 
-    await fetch("/favourite-movies", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(myFavouriteMovie),
-    });
+    await fetch(
+      "https://my-movie-list-challenge.herokuapp.com/favourite-movies",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(myFavouriteMovie),
+      }
+    );
     this.props.history.push(`/${this.state.searchWord}`);
   }
 
@@ -58,7 +61,9 @@ class MoviesEdit extends Component {
       this.setState({ isLoading: true });
       this.setState({ userId: myParams.userId });
       const myMovieDetail = await (
-        await fetch(`/movie/${myParams.movieId}`)
+        await fetch(
+          `https://my-movie-list-challenge.herokuapp.com/movie/${myParams.movieId}`
+        )
       ).json();
 
       if (myParams.idToRemove !== 0) {
@@ -71,13 +76,16 @@ class MoviesEdit extends Component {
   }
 
   async removeFromFavourites() {
-    await fetch(`/favourite-movies/${this.state.movie.idToRemove}`, {
-      method: "DELETE",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    }).then(() => {
+    await fetch(
+      `https://my-movie-list-challenge.herokuapp.com/favourite-movies/${this.state.movie.idToRemove}`,
+      {
+        method: "DELETE",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    ).then(() => {
       this.props.history.push(`/${this.state.searchWord}`);
     });
   }
